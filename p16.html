@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <center>
+        <h3>window.close() and window.open()</h3>
+    </center>
+    <hr>
+
+    <button onclick="openHandler()">open</button>
+    <button onclick="closehandler()">close</button>
+    
+    <script>
+        var webstats;//global variable
+
+        function openhandler(){
+        webstats = window.open(`https://youtube.com`);//to open new tab
+        }
+        function closehandler(){
+       console.log('webstats =',webstats);
+       webstats.close();
+        }
+    </script>
+</body>
+</html>

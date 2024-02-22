@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        .test{
+            background-color: grey;
+            color: blueviolet;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>DOM</h1>
+    </center>
+<hr>
+<p class="test">THIS IS A PARAGRAPH...</p>
+<h1 class="test">THIS IS A PARAGRAPH...</h1>
+
+<script>
+ try{
+    let matches = document.getElementsByClassName("test");
+
+document.write(`<p>${matches}</p>`);
+
+console.log(matches);
+
+matches[0].style.backgroundColor = "yellow";
+matches[1].style.backgroundColor = "red";
+
+//if we have more than two we use for in to change as above
+
+for (let key in matches) {
+    matches[key].style.backgroundColor = "maroon";
+    matches[key].style.color = "#fff";
+}
+ }
+ catch(error){
+    console.log(error.message);
+ }
+</script>
+</body>
+</html>

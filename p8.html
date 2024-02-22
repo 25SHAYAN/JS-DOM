@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <center>
+        <h1>DOM</h1>
+    </center>
+    <hr>
+    <p>This is a paragraph of text</p>
+    <div class="test">This is DIV of text....</div>
+    <p>This is one more paragraph of text....</p>
+
+    <script>
+    try{
+        document.write("<p>THIS IS JS PARAGRAPH</p>");
+
+let matches = document.getElementsByTagName("p");
+console.log(matches);//this will come under array format
+
+document.write("<b>matches Type</b>" + typeof(matches),"<br>");
+document.write("<b>matches length :</b>" + matches.length);//returns array length
+
+//IF WE WANT WE CAN TAKE HELP FROM FOR LOOP ALSO(normal for)
+
+for (let index = 0; index < matches.length; index++) {
+   matches[index].style.backgroundColor = "red";
+    
+}
+
+//for in
+for (const key in matches) {
+    matches[key].style.color = "#fff";
+}
+    }
+    catch(error){
+        console.log(error.message);
+
+    }
+    //to remove error we use try catch
+    </script>
+</body>
+</html>

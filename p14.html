@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 50px;
+            background-color: #44ff33;
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>QUERY SELECTOR ALL</h1>
+    </center>
+    <hr>
+
+    <button onclick="click()">click me</button>
+    <section>
+        <div class="box" id="1"></div>
+        <div class="box" id="2"></div>
+        <div class="box" id="3"></div>
+        <div class="box" id="4"></div>
+        <div class="box" id="5"></div>
+        <div class="box" id="6"></div>
+        <div class="box" id="7"></div>
+        <div class="box" id="8"></div>
+        <div class="box" id="9"></div>
+  
+    </section>
+    <script>
+        function click(){
+          let selbox = document.querySelector('.box');//.box is class
+          console.log('total boxes = ',selbox);
+
+          for(let index = 0; index < selbox.length; index++){
+            selbox[index].style.backgroundColor = "orangered";
+          }
+        }
+    </script>
+</body>
+</html>

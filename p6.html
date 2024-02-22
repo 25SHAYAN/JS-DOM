@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+
+    <section id="blk"></section>
+    <hr>
+    <button type="button" onclick="addContent()">Add Block</button>
+    <button type="button" onclick="removeContent()">Remove Content</button>
+
+    <script>
+        function addContent(){
+           // alert("AddContent Function");
+           let content = `
+           <h1>WELCOME TO JS</h1>
+           <h3>Sub title of js</h3>
+           <p>    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae repellendus, ab beatae nihil magni aspernatur asperiores eaque quisquam facilis amet!  </p>
+          <button type="button" onclick="removeContent()">Remove Content</button>
+           `;
+
+           document.getElementById('blk').innerHTML=content;
+        }
+        function removeContent(){
+            //alert("RemoveContent Function");
+            //just use empty string to cear content
+            document.getElementById('blk').innerHTML="";
+        }
+    </script>
+</body>
+</html>
